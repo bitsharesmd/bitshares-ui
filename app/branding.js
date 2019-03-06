@@ -66,7 +66,7 @@ export function getDefaultLogin() {
  */
 export function getUnits(chainId = "4018d784") {
     if (chainId === "4018d784")
-        return ["BTS", "USD", "CNY", "BTC", "EUR", "GBP"];
+        return ["BTS", "USD", "CNY", "BTSMD", "BTC", "EUR", "GBP"];
     else if (chainId === "39f5e2ed") return ["TEST"];
     // unknown chain id: (need to return at least one unit)
     else return ["BTS"];
@@ -79,7 +79,7 @@ export function getUnits(chainId = "4018d784") {
  */
 
 export function getMyMarketsBases() {
-    return ["BTC", "ETH", "BTS", "USD", "CNY"];
+    return ["BTC", "ETH", "BTS", "USD", "CNY", "BTSMD"];
 }
 
 /**
@@ -93,6 +93,7 @@ export function getMyMarketsQuotes() {
             "BTC",
             "BTS",
             "CNY",
+            "BTSMD",
             "EUR",
             "GOLD",
             "KRW",
@@ -223,6 +224,17 @@ export function getFeaturedMarkets(quotes = []) {
         ["CNY", "GDEX.EOS"],
         ["CNY", "GDEX.BTO"],
         ["CNY", "GDEX.BTM"],
+        ["BTSMD", "BTS"],
+        ["BTSMD", "OPEN.BTC"],
+        ["BTSMD", "USD"],
+        ["BTSMD", "OPEN.ETH"],
+        ["BTSMD", "YOYOW"],
+        ["BTSMD", "OCT"],
+        ["BTSMD", "GDEX.BTC"],
+        ["BTSMD", "GDEX.ETH"],
+        ["BTSMD", "GDEX.EOS"],
+        ["BTSMD", "GDEX.BTO"],
+        ["BTSMD", "GDEX.BTM"],
         ["OPEN.BTC", "BTS"],
         ["OPEN.BTC", "OPEN.ETH"],
         ["OPEN.BTC", "OPEN.DASH"],
@@ -264,8 +276,10 @@ export function getFeaturedMarkets(quotes = []) {
         ["USD", "RUDEX.KRM"],
         ["RUBLE", "RUDEX.GOLOS"],
         ["CNY", "RUDEX.GOLOS"],
+        ["BTSMD", "RUDEX.GOLOS"],
         ["RUBLE", "RUDEX.GBG"],
         ["CNY", "RUDEX.GBG"],
+        ["BTSMD", "RUDEX.GBG"],
         ["BTS", "RUDEX.MUSE"],
         ["BTS", "RUDEX.TT"],
         ["BTS", "RUDEX.SCR"],
